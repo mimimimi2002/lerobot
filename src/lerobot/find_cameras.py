@@ -286,7 +286,7 @@ def save_images_from_all_cameras(
             print(f"Image capture finished. Images saved to {output_dir}")
 
 
-def main():
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Unified camera utility script for listing cameras and capturing images."
     )
@@ -313,7 +313,3 @@ def main():
     )
     args = parser.parse_args()
     save_images_from_all_cameras(**vars(args))
-
-
-if __name__ == "__main__":
-    main()

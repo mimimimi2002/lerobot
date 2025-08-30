@@ -80,9 +80,5 @@ def setup_motors(cfg: SetupConfig):
     device.setup_motors()
 
 
-def main():
-    setup_motors()
-
-
 if __name__ == "__main__":
-    main()
+    setup_motors()

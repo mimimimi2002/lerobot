@@ -63,7 +63,7 @@ import torch.nn.functional as F  # noqa: N812
 from torch import Tensor, nn
 from transformers import AutoProcessor
 
-from lerobot.constants import ACTION, OBS_STATE
+from lerobot.constants import ACTION, OBS_STATE, OBS_FINGER1_COLLISION
 from lerobot.policies.normalize import (
     Normalize,
     Unnormalize,
@@ -162,13 +162,21 @@ def load_smolvla(
     state_dict = {k: v for k, v in state_dict.items() if not k.startswith(norm_keys)}
 
     missing, unexpected = model.load_state_dict(state_dict, strict=False)
+    #if not all(key.startswith(norm_keys) for key in missing) or unexpected:
+    #   raise RuntimeError(
+    #       "SmolVLA %d missing / %d unexpected keys",
+    #       len(missing),
+    #       len(unexpected),
+    #   )
 
-    if not all(key.startswith(norm_keys) for key in missing) or unexpected:
-        raise RuntimeError(
-            "SmolVLA %d missing / %d unexpected keys",
-            len(missing),
-            len(unexpected),
-        )
+    # forceを加えた後にエラーにならないようにする
+    if len(unexpected) > 0:
+        raise RuntimeError(f"Unexpected keys: {unexpected}")
+
+    if len(missing) > 0:
+        print(f"[Warning] Missing {len(missing)} keys (expected when extending the model):")
+        for k in missing:
+            print("   ", k)
 
     return model
 
@@ -192,6 +200,12 @@ def create_sinusoidal_pos_embedding(
     sin_input = scaling_factor[None, :] * time[:, None]
     pos_emb = torch.cat([torch.sin(sin_input), torch.cos(sin_input)], dim=1)
     return pos_emb
+
+
+def sample_beta(alpha, beta, bsize, device):
+    gamma1 = torch.empty((bsize,), device=device).uniform_(0, 1).pow(1 / alpha)
+    gamma2 = torch.empty((bsize,), device=device).uniform_(0, 1).pow(1 / beta)
+    return gamma1 / (gamma1 + gamma2)
 
 
 def make_att_2d_masks(pad_masks, att_masks):
@@ -378,19 +392,14 @@ class SmolVLAPolicy(PreTrainedPolicy):
         return self.parameters()
 
     def _get_action_chunk(self, batch: dict[str, Tensor], noise: Tensor | None = None) -> Tensor:
-        # TODO: Check if this for loop is needed.
-        # Context: In fact, self.queues contains only ACTION field, and in inference, we don't have action in the batch
-        # In the case of offline inference, we have the action in the batch
-        # that why without the k != ACTION check, it will raise an error because we are trying to stack
-        # on an empty container.
         for k in batch:
-            if k in self._queues and k != ACTION:
+            if k in self._queues:
                 batch[k] = torch.stack(list(self._queues[k]), dim=1)
 
         images, img_masks = self.prepare_images(batch)
         state = self.prepare_state(batch)
         lang_tokens, lang_masks = self.prepare_language(batch)
-
+        
         actions = self.model.sample_actions(images, img_masks, lang_tokens, lang_masks, state, noise=noise)
 
         # Unpad actions
@@ -446,6 +455,7 @@ class SmolVLAPolicy(PreTrainedPolicy):
         return self._queues[ACTION].popleft()
 
     def forward(self, batch: dict[str, Tensor], noise=None, time=None) -> dict[str, Tensor]:
+        print(batch)
         """Do a full training forward pass to compute the loss"""
         if self.config.adapt_to_pi_aloha:
             batch[OBS_STATE] = self._pi_aloha_decode_state(batch[OBS_STATE])
@@ -455,17 +465,17 @@ class SmolVLAPolicy(PreTrainedPolicy):
         images, img_masks = self.prepare_images(batch)
         state = self.prepare_state(batch)
         
-        # add finger1 collision
+        # add force
         if OBS_FINGER1_COLLISION in batch:
             finger1_collision = self.prepare_finger1_collision(batch)
-
         else:
             finger1_collision = None
+
         lang_tokens, lang_masks = self.prepare_language(batch)
         actions = self.prepare_action(batch)
         actions_is_pad = batch.get("actions_id_pad")
         loss_dict = {}
-        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state, finger1_collision,  actions, noise, time)
+        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state,  actions, noise, time, finger1_collision=finger1_collision)
         loss_dict["losses_after_forward"] = losses.clone()
 
         if actions_is_pad is not None:
@@ -581,15 +591,11 @@ class SmolVLAPolicy(PreTrainedPolicy):
         state = batch[OBS_STATE][:, -1, :] if batch[OBS_STATE].ndim > 2 else batch[OBS_STATE]
         state = pad_vector(state, self.config.max_state_dim)
         return state
-    
-    # add prepare force function
+
     def prepare_finger1_collision(self, batch):
         """Pad finger1 collision"""
-        # 次元数を二次元に削減 (B, T, D) -> (B, D)
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
         finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
-        print("self.config.max_force_dim")
-        print(self.config.max_force_dim)
         return finger1_collision
 
     def prepare_action(self, batch):
@@ -647,7 +653,7 @@ class VLAFlowMatching(nn.Module):
     └──────────────────────────────┘
     """
 
-    def __init__(self, config: SmolVLAConfig):
+    def __init__(self, config):
         super().__init__()
         self.config = config
 
@@ -665,10 +671,8 @@ class VLAFlowMatching(nn.Module):
         self.state_proj = nn.Linear(
             self.config.max_state_dim, self.vlm_with_expert.config.text_config.hidden_size
         )
-
-        # add force_proj easy mlp
         self.force_proj = nn.Linear(
-        self.config.max_force_dim, self.vlm_with_expert.config.text_config.hidden_size
+            self.config.max_force_dim, self.vlm_with_expert.config.text_config.hidden_size
         )
         self.action_in_proj = nn.Linear(self.config.max_action_dim, self.vlm_with_expert.expert_hidden_size)
         self.action_out_proj = nn.Linear(self.vlm_with_expert.expert_hidden_size, self.config.max_action_dim)
@@ -706,10 +710,9 @@ class VLAFlowMatching(nn.Module):
         return noise
 
     def sample_time(self, bsize, device):
-        beta_dist = torch.distributions.Beta(concentration1=1.5, concentration0=1.0)
-        time_beta = beta_dist.sample((bsize,)).to(device=device, dtype=torch.float32)
+        time_beta = sample_beta(1.5, 1.0, bsize, device)
         time = time_beta * 0.999 + 0.001
-        return time
+        return time.to(dtype=torch.float32, device=device)
 
     def embed_prefix(
             self, images, img_masks, lang_tokens, lang_masks, state: torch.Tensor = None, force: torch.Tensor = None
@@ -790,11 +793,11 @@ class VLAFlowMatching(nn.Module):
 
         # Set attention masks so that image and language inputs do not attend to state or actions
         att_masks += [1] * (states_seq_len)
-
-        # add force
+        
         if force is None:
-            force_emb = self.force_proj(force)  # embeddingにする
-            force_emb = force_emb[:, None, :]   # sequence 次元を持たせる (B, 1, hidden_dim)
+            # ここでforceを加える
+            force_emb = self.force_proj(force) # embeddingにする
+            force_emb = force_emb[:, None, :] # sequence 次元を持たせる (B, 1, hidden_dim)
             embs.append(force_emb)
 
             bsize = force_emb.shape[0]
@@ -802,10 +805,8 @@ class VLAFlowMatching(nn.Module):
 
             force_seq_len = force_emb.shape[1]
             force_mask = torch.ones(bsize, 1, dtype=torch.bool, device=device)
-            pad_masks.append(force_mask) # その系列の要素が「有効」かどうかを示>すマスク
-
-            att_masks += [1] * (force_seq_len) # attention の際に系列の長さを管>理するリストsks += [1] * (force_seq_len) # attention の際に系列の長さを管理するリスト
-
+            pad_masks.append(force_mask) # その系列の要素が「有効」かどうかを示すマスク
+            att_masks += [1] * (force_seq_len) # attention の際に系列の長さを管理するリスト
 
         embs = torch.cat(embs, dim=1)
         pad_masks = torch.cat(pad_masks, dim=1)
@@ -866,7 +867,7 @@ class VLAFlowMatching(nn.Module):
         return embs, pad_masks, att_masks
 
     def forward(
-        self, images, img_masks, lang_tokens, lang_masks, state, finger1_collision, actions, noise=None, time=None
+        self, images, img_masks, lang_tokens, lang_masks, state, actions, noise=None, time=None, finger1_collision=None
     ) -> Tensor:
         """Do a full training forward pass and compute the loss (batch_size x num_steps x num_motors)"""
         if noise is None:

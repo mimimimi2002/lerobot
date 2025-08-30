@@ -112,9 +112,5 @@ def replay(cfg: ReplayConfig):
     robot.disconnect()
 
 
-def main():
-    replay()
-
-
 if __name__ == "__main__":
-    main()
+    replay()

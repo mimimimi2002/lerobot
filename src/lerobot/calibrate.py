@@ -82,9 +82,5 @@ def calibrate(cfg: CalibrateConfig):
     device.disconnect()
 
 
-def main():
-    calibrate()
-
-
 if __name__ == "__main__":
-    main()
+    calibrate()

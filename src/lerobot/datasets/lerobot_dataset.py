@@ -18,6 +18,7 @@ import logging
 import shutil
 from collections.abc import Callable
 from pathlib import Path
+import os
 
 import datasets
 import numpy as np
@@ -594,16 +595,57 @@ class LeRobotDataset(torch.utils.data.Dataset):
 
         return fpaths
 
+    # def load_hf_dataset(self) -> datasets.Dataset:
+    #     """hf_dataset contains all the observations, states, actions, rewards, etc."""
+    #     if self.episodes is None:
+    #         path = str(self.root / "data")
+    #         hf_dataset = load_dataset("parquet", data_dir=path, split="train")
+    #     else:
+    #         files = [str(self.root / self.meta.get_data_file_path(ep_idx)) for ep_idx in self.episodes]
+    #         hf_dataset = load_dataset("parquet", data_files=files, split="train")
+
+    #     # TODO(aliberts): hf_dataset.set_format("torch")
+    #     hf_dataset.set_transform(hf_transform_to_torch)
+    #     return hf_dataset
+    
     def load_hf_dataset(self) -> datasets.Dataset:
         """hf_dataset contains all the observations, states, actions, rewards, etc."""
+        print("[DEBUG] self.root:", self.root)
+        print("[DEBUG] self.episodes:", self.episodes)
+
         if self.episodes is None:
             path = str(self.root / "data")
+            print("[DEBUG] data_dir path:", path)
+            print("[DEBUG] os.path.exists(path):", os.path.exists(path))
             hf_dataset = load_dataset("parquet", data_dir=path, split="train")
         else:
             files = [str(self.root / self.meta.get_data_file_path(ep_idx)) for ep_idx in self.episodes]
-            hf_dataset = load_dataset("parquet", data_files=files, split="train")
+            print("[DEBUG] data_files:", files)
 
-        # TODO(aliberts): hf_dataset.set_format("torch")
+            for f in files:
+                exists = os.path.exists(f)
+                size = os.path.getsize(f) if exists else -1
+                print(f"[DEBUG] {f} exists: {exists}, size: {size}")
+
+                if exists and size == 0:
+                    print(f"[WARNING] {f} is an empty file!")
+            try:
+                hf_dataset = load_dataset("parquet", data_files=files, split="train")
+            except Exception as e:
+                print("[ERROR] Failed to load dataset from files.")
+                print(e)
+                # ファイルごとに読み込みテスト
+                for f in files:
+                    try:
+                        print(f"[TEST] loading {f}")
+                        _ = load_dataset("parquet", data_files=f, split="train")
+                    except Exception as e_file:
+                        print(f"[ERROR] Failed to load {f}")
+                        print(e_file)
+                raise e  # 最後に再度raiseして止めても良い
+
+
+        print("[DEBUG] Loaded HF dataset:", hf_dataset)
         hf_dataset.set_transform(hf_transform_to_torch)
         return hf_dataset
 
@@ -1232,3 +1274,4 @@ class MultiLeRobotDataset(torch.utils.data.Dataset):
             f"  Transformations: {self.image_transforms},\n"
             f")"
         )
+

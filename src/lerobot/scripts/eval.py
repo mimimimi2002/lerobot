@@ -501,10 +501,6 @@ def eval_main(cfg: EvalPipelineConfig):
     logging.info("End of eval")
 
 
-def main():
+if __name__ == "__main__":
     init_logging()
     eval_main()
-
-
-if __name__ == "__main__":
-    main()

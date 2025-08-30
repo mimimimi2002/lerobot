@@ -42,7 +42,7 @@ class SmolVLAConfig(PreTrainedConfig):
     max_state_dim: int = 32
     max_action_dim: int = 32
 
-    # Add force max state dim
+    # add force
     max_force_dim: int = 32
 
     # Image preprocessing
