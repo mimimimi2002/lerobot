@@ -42,6 +42,9 @@ class SmolVLAConfig(PreTrainedConfig):
     max_state_dim: int = 32
     max_action_dim: int = 32
 
+    # Add force max state dim
+    max_force_dim: int = 32
+
     # Image preprocessing
     resize_imgs_with_padding: tuple[int, int] = (512, 512)
 

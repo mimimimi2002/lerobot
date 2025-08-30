@@ -454,11 +454,18 @@ class SmolVLAPolicy(PreTrainedPolicy):
         batch = self.normalize_targets(batch)
         images, img_masks = self.prepare_images(batch)
         state = self.prepare_state(batch)
+        
+        # add finger1 collision
+        if OBS_FINGER1_COLLISION in batch:
+            finger1_collision = self.prepare_finger1_collision(batch)
+
+        else:
+            finger1_collision = None
         lang_tokens, lang_masks = self.prepare_language(batch)
         actions = self.prepare_action(batch)
         actions_is_pad = batch.get("actions_id_pad")
         loss_dict = {}
-        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state, actions, noise, time)
+        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state, finger1_collision,  actions, noise, time)
         loss_dict["losses_after_forward"] = losses.clone()
 
         if actions_is_pad is not None:
@@ -574,6 +581,14 @@ class SmolVLAPolicy(PreTrainedPolicy):
         state = batch[OBS_STATE][:, -1, :] if batch[OBS_STATE].ndim > 2 else batch[OBS_STATE]
         state = pad_vector(state, self.config.max_state_dim)
         return state
+    
+    # add prepare force function
+    def prepare_finger1_collision(self, batch):
+        """Pad finger1 collision"""
+        # 次元数を二次元に削減 (B, T, D) -> (B, D)
+        finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
+        finger1_collision = pad_vector(finger1_collision, self.config.max_finger1_collision_dim)
+        return finger1_collision
 
     def prepare_action(self, batch):
         """Pad action"""
@@ -648,6 +663,11 @@ class VLAFlowMatching(nn.Module):
         self.state_proj = nn.Linear(
             self.config.max_state_dim, self.vlm_with_expert.config.text_config.hidden_size
         )
+
+        # add force_proj easy mlp
+        self.force_proj = nn.Linear(
+        self.config.max_force_dim, self.vlm_with_expert.config.text_config.hidden_size
+        )
         self.action_in_proj = nn.Linear(self.config.max_action_dim, self.vlm_with_expert.expert_hidden_size)
         self.action_out_proj = nn.Linear(self.vlm_with_expert.expert_hidden_size, self.config.max_action_dim)
 
@@ -690,7 +710,7 @@ class VLAFlowMatching(nn.Module):
         return time
 
     def embed_prefix(
-        self, images, img_masks, lang_tokens, lang_masks, state: torch.Tensor = None
+            self, images, img_masks, lang_tokens, lang_masks, state: torch.Tensor = None, force: torch.Tensor = None
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Embed images with SigLIP and language tokens with embedding layer to prepare
         for SmolVLM transformer processing.
@@ -768,6 +788,23 @@ class VLAFlowMatching(nn.Module):
 
         # Set attention masks so that image and language inputs do not attend to state or actions
         att_masks += [1] * (states_seq_len)
+
+        # add force
+        if force is None:
+            force_emb = self.force_proj(force)  # embeddingにする
+            force_emb = force_emb[:, None, :]   # sequence 次元を持たせる (B, 1, hidden_dim)
+            embs.append(force_emb)
+
+            bsize = force_emb.shape[0]
+            device = force_emb.device
+
+            force_seq_len = force_emb.shape[1]
+            force_mask = torch.ones(bsize, 1, dtype=torch.bool, device=device)
+            pad_masks.append(force_mask) # その系列の要素が「有効」かどうかを示>すマスク
+
+            att_masks += [1] * (force_seq_len) # attention の際に系列の長さを管>理するリストsks += [1] * (force_seq_len) # attention の際に系列の長さを管理するリスト
+
+
         embs = torch.cat(embs, dim=1)
         pad_masks = torch.cat(pad_masks, dim=1)
         att_masks = torch.tensor(att_masks, dtype=torch.bool, device=pad_masks.device)
@@ -827,7 +864,7 @@ class VLAFlowMatching(nn.Module):
         return embs, pad_masks, att_masks
 
     def forward(
-        self, images, img_masks, lang_tokens, lang_masks, state, actions, noise=None, time=None
+        self, images, img_masks, lang_tokens, lang_masks, state, finger1_collision, actions, noise=None, time=None
     ) -> Tensor:
         """Do a full training forward pass and compute the loss (batch_size x num_steps x num_motors)"""
         if noise is None:
@@ -840,7 +877,7 @@ class VLAFlowMatching(nn.Module):
         x_t = time_expanded * noise + (1 - time_expanded) * actions
         u_t = noise - actions
         prefix_embs, prefix_pad_masks, prefix_att_masks = self.embed_prefix(
-            images, img_masks, lang_tokens, lang_masks, state=state
+            images, img_masks, lang_tokens, lang_masks, state=state, force=finger1_collision
         )
         suffix_embs, suffix_pad_masks, suffix_att_masks = self.embed_suffix(x_t, time)
 
