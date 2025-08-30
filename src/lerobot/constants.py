@@ -21,7 +21,13 @@ OBS_ENV_STATE = "observation.environment_state"
 OBS_STATE = "observation.state"
 OBS_IMAGE = "observation.image"
 OBS_IMAGES = "observation.images"
+
+# add force
 OBS_FINGER1_COLLISION = "observation.states.finger1_collision"
+OBS_FINGER1_PAD_COLLISION = "observation.states.finger1_pad_collision"
+OBS_FINGER2_COLLISION = "observation.states.finger2_collision"
+OBS_FINGER2_PAD_COLLISION = "observation.states.finger2_pad_collision"
+
 ACTION = "action"
 REWARD = "next.reward"
 
