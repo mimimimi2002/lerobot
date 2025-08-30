@@ -587,7 +587,9 @@ class SmolVLAPolicy(PreTrainedPolicy):
         """Pad finger1 collision"""
         # 次元数を二次元に削減 (B, T, D) -> (B, D)
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
-        finger1_collision = pad_vector(finger1_collision, self.config.max_finger1_collision_dim)
+        finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
+        print("self.config.max_force_dim")
+        print(self.config.max_force_dim)
         return finger1_collision
 
     def prepare_action(self, batch):
