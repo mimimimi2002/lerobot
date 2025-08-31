@@ -455,7 +455,6 @@ class SmolVLAPolicy(PreTrainedPolicy):
         return self._queues[ACTION].popleft()
 
     def forward(self, batch: dict[str, Tensor], noise=None, time=None) -> dict[str, Tensor]:
-        print(batch)
         """Do a full training forward pass to compute the loss"""
         if self.config.adapt_to_pi_aloha:
             batch[OBS_STATE] = self._pi_aloha_decode_state(batch[OBS_STATE])
