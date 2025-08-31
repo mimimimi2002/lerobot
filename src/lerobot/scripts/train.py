@@ -206,7 +206,6 @@ def train(cfg: TrainPipelineConfig):
         train_tracker.dataloading_s = time.perf_counter() - start_time
 
         for key in batch:
-            print(key)
             print(batch[key].shape) if type(batch[key]) != list else print(len(batch[key]))
             if isinstance(batch[key], torch.Tensor):
                 batch[key] = batch[key].to(device, non_blocking=device.type == "cuda")
