@@ -793,7 +793,7 @@ class VLAFlowMatching(nn.Module):
         # Set attention masks so that image and language inputs do not attend to state or actions
         att_masks += [1] * (states_seq_len)
         
-        if force is None:
+        if force not  None:
             # ここでforceを加える
             force_emb = self.force_proj(force) # embeddingにする
             force_emb = force_emb[:, None, :] # sequence 次元を持たせる (B, 1, hidden_dim)
