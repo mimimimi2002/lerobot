@@ -793,7 +793,7 @@ class VLAFlowMatching(nn.Module):
         # Set attention masks so that image and language inputs do not attend to state or actions
         att_masks += [1] * (states_seq_len)
         
-        if force not  None:
+        if force is not None:
             # ここでforceを加える
             force_emb = self.force_proj(force) # embeddingにする
             force_emb = force_emb[:, None, :] # sequence 次元を持たせる (B, 1, hidden_dim)
@@ -806,7 +806,7 @@ class VLAFlowMatching(nn.Module):
             force_mask = torch.ones(bsize, 1, dtype=torch.bool, device=device)
             pad_masks.append(force_mask) # その系列の要素が「有効」かどうかを示すマスク
             att_masks += [1] * (force_seq_len) # attention の際に系列の長さを管理するリスト
-
+        
         embs = torch.cat(embs, dim=1)
         pad_masks = torch.cat(pad_masks, dim=1)
         att_masks = torch.tensor(att_masks, dtype=torch.bool, device=pad_masks.device)
