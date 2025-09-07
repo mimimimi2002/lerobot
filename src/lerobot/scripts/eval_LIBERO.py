@@ -18,7 +18,7 @@ from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 from tqdm import tqdm
 
-from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
+from lerobot.common.policies.smolvla.modeling_smolvla import SmolVLAPolicy
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
