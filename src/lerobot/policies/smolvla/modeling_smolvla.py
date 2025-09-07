@@ -466,15 +466,15 @@ class SmolVLAPolicy(PreTrainedPolicy):
         
         # add force
         if OBS_FINGER1_COLLISION in batch:
-            finger1_collision = self.prepare_force(batch)
+            combined_force = self.prepare_force(batch)
         else:
-            finger1_collision = None
+            combined_force = None
 
         lang_tokens, lang_masks = self.prepare_language(batch)
         actions = self.prepare_action(batch)
         actions_is_pad = batch.get("actions_id_pad")
         loss_dict = {}
-        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state,  actions, noise, time, finger1_collision=finger1_collision)
+        losses = self.model.forward(images, img_masks, lang_tokens, lang_masks, state,  actions, noise, time, finger1_collision=combined_force)
         loss_dict["losses_after_forward"] = losses.clone()
 
         if actions_is_pad is not None:
