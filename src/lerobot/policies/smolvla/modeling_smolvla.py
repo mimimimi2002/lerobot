@@ -466,7 +466,7 @@ class SmolVLAPolicy(PreTrainedPolicy):
         
         # add force
         if OBS_FINGER1_COLLISION in batch:
-            finger1_collision = self.prepare_finger1_collision(batch)
+            finger1_collision = self.prepare_force(batch)
         else:
             finger1_collision = None
 
@@ -591,21 +591,21 @@ class SmolVLAPolicy(PreTrainedPolicy):
         state = pad_vector(state, self.config.max_state_dim)
         return state
 
-    def prepare_finger1_collision(self, batch):
+    def prepare_force(self, batch):
         """Pad finger1 collision"""
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
         finger1_pad_collision = batch[OBS_FINGER1_PAD_COLLISION][:, -1, :] if batch[OBS_FINGER1_PAD_COLLISION].ndim > 2 else batch[OBS_FINGER1_PAD_COLLISION]
         finger2_collision = batch[OBS_FINGER2_COLLISION][:, -1, :] if batch[OBS_FINGER2_COLLISION].ndim > 2 else batch[OBS_FINGER2_COLLISION]
         finger2_pad_collision = batch[OBS_FINGER2_PAD_COLLISION][:, -1, :] if batch[OBS_FINGER2_PAD_COLLISION].ndim > 2 else batch[OBS_FINGER2_PAD_COLLISION]
         
-        combined = torch.cat(
+        combined_force = torch.cat(
             [finger1_collision, finger1_pad_collision, finger2_collision, finger2_pad_collision],
             dim=1
         )
         
-        finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
-                
-        return finger1_collision
+        combined_force = pad_vector(combined_force, self.config.max_force_dim)
+        
+        return combined_force
 
     def prepare_action(self, batch):
         """Pad action"""
