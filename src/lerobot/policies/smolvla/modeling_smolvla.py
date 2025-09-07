@@ -63,7 +63,7 @@ import torch.nn.functional as F  # noqa: N812
 from torch import Tensor, nn
 from transformers import AutoProcessor
 
-from lerobot.constants import ACTION, OBS_STATE, OBS_FINGER1_COLLISION
+from lerobot.constants import ACTION, OBS_STATE, OBS_FINGER1_COLLISION, OBS_FINGER1_PAD_COLLISION, OBS_FINGER2_COLLISION, OBS_FINGER2_PAD_COLLISION
 from lerobot.policies.normalize import (
     Normalize,
     Unnormalize,
@@ -75,6 +75,7 @@ from lerobot.policies.utils import (
     populate_queues,
 )
 from lerobot.utils.utils import get_safe_dtype
+import numpy as np
 
 # Matches ".soNNN", optionally followed by "-something", up to the "_buffer_" marker
 _VARIANT_RE = re.compile(r"\.so\d+(?:-[\w]+)?_buffer_")
@@ -395,13 +396,12 @@ class SmolVLAPolicy(PreTrainedPolicy):
         for k in batch:
             if k in self._queues:
                 batch[k] = torch.stack(list(self._queues[k]), dim=1)
-
+        
         images, img_masks = self.prepare_images(batch)
         state = self.prepare_state(batch)
         lang_tokens, lang_masks = self.prepare_language(batch)
         
         actions = self.model.sample_actions(images, img_masks, lang_tokens, lang_masks, state, noise=noise)
-
         # Unpad actions
         original_action_dim = self.config.action_feature.shape[0]
         actions = actions[:, :, :original_action_dim]
@@ -455,7 +455,6 @@ class SmolVLAPolicy(PreTrainedPolicy):
         return self._queues[ACTION].popleft()
 
     def forward(self, batch: dict[str, Tensor], noise=None, time=None) -> dict[str, Tensor]:
-        print(batch)
         """Do a full training forward pass to compute the loss"""
         if self.config.adapt_to_pi_aloha:
             batch[OBS_STATE] = self._pi_aloha_decode_state(batch[OBS_STATE])
@@ -595,7 +594,17 @@ class SmolVLAPolicy(PreTrainedPolicy):
     def prepare_finger1_collision(self, batch):
         """Pad finger1 collision"""
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
+        finger1_pad_collision = batch[OBS_FINGER1_PAD_COLLISION][:, -1, :] if batch[OBS_FINGER1_PAD_COLLISION].ndim > 2 else batch[OBS_FINGER1_PAD_COLLISION]
+        finger2_collision = batch[OBS_FINGER2_COLLISION][:, -1, :] if batch[OBS_FINGER2_COLLISION].ndim > 2 else batch[OBS_FINGER2_COLLISION]
+        finger2_pad_collision = batch[OBS_FINGER2_PAD_COLLISION][:, -1, :] if batch[OBS_FINGER2_PAD_COLLISION].ndim > 2 else batch[OBS_FINGER2_PAD_COLLISION]
+        
+        combined = torch.cat(
+            [finger1_collision, finger1_pad_collision, finger2_collision, finger2_pad_collision],
+            dim=1
+        )
+        
         finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
+                
         return finger1_collision
 
     def prepare_action(self, batch):
@@ -794,7 +803,7 @@ class VLAFlowMatching(nn.Module):
         # Set attention masks so that image and language inputs do not attend to state or actions
         att_masks += [1] * (states_seq_len)
         
-        if force is None:
+        if force is not None:
             # ここでforceを加える
             force_emb = self.force_proj(force) # embeddingにする
             force_emb = force_emb[:, None, :] # sequence 次元を持たせる (B, 1, hidden_dim)
@@ -912,7 +921,7 @@ class VLAFlowMatching(nn.Module):
         if noise is None:
             actions_shape = (bsize, self.config.chunk_size, self.config.max_action_dim)
             noise = self.sample_noise(actions_shape, device)
-
+        
         prefix_embs, prefix_pad_masks, prefix_att_masks = self.embed_prefix(
             images, img_masks, lang_tokens, lang_masks, state=state
         )
