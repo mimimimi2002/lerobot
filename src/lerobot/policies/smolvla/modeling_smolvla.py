@@ -603,7 +603,8 @@ class SmolVLAPolicy(PreTrainedPolicy):
             dim=1
         )
         
-        combined_force = pad_vector(combined_force, self.config.max_force_dim)
+        # not need to pad combined_force
+        # combined_force = pad_vector(combined_force, self.config.max_force_dim)
         
         return combined_force
 
