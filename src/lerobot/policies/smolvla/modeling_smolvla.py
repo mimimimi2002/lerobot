@@ -594,7 +594,9 @@ class SmolVLAPolicy(PreTrainedPolicy):
     def prepare_finger1_collision(self, batch):
         """Pad finger1 collision"""
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
-        finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
+        
+        # remove padding for finger1 collsiion
+        # finger1_collision = pad_vector(finger1_collision, self.config.max_force_dim)
         return finger1_collision
 
     def prepare_action(self, batch):
