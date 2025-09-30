@@ -1,0 +1,856 @@
+2025-09-06 22:35:27,340 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-09-06 22:35:32,882 - INFO - Task suite: libero_object
+2025-09-06 22:35:34,710 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:35,451 - INFO - Starting episode 1...
+2025-09-06 22:35:35,656 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:35,774 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_0_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:35,774 - INFO - Success: False
+2025-09-06 22:35:35,774 - INFO - # episodes completed so far: 1
+2025-09-06 22:35:35,774 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:35,775 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:36,509 - INFO - Starting episode 2...
+2025-09-06 22:35:36,520 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:36,593 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_1_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:36,593 - INFO - Success: False
+2025-09-06 22:35:36,593 - INFO - # episodes completed so far: 2
+2025-09-06 22:35:36,593 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:36,593 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:37,322 - INFO - Starting episode 3...
+2025-09-06 22:35:37,334 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:37,404 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_2_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:37,404 - INFO - Success: False
+2025-09-06 22:35:37,404 - INFO - # episodes completed so far: 3
+2025-09-06 22:35:37,405 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:37,405 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:38,119 - INFO - Starting episode 4...
+2025-09-06 22:35:38,131 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:38,204 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_3_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:38,204 - INFO - Success: False
+2025-09-06 22:35:38,205 - INFO - # episodes completed so far: 4
+2025-09-06 22:35:38,205 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:38,205 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:38,921 - INFO - Starting episode 5...
+2025-09-06 22:35:38,933 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:39,005 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_4_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:39,005 - INFO - Success: False
+2025-09-06 22:35:39,005 - INFO - # episodes completed so far: 5
+2025-09-06 22:35:39,006 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:39,006 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:39,720 - INFO - Starting episode 6...
+2025-09-06 22:35:39,732 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:39,803 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_5_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:39,803 - INFO - Success: False
+2025-09-06 22:35:39,803 - INFO - # episodes completed so far: 6
+2025-09-06 22:35:39,803 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:39,804 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:40,522 - INFO - Starting episode 7...
+2025-09-06 22:35:40,534 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:40,606 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_6_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:40,606 - INFO - Success: False
+2025-09-06 22:35:40,607 - INFO - # episodes completed so far: 7
+2025-09-06 22:35:40,607 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:40,607 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:41,333 - INFO - Starting episode 8...
+2025-09-06 22:35:41,345 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:41,415 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_7_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:41,415 - INFO - Success: False
+2025-09-06 22:35:41,416 - INFO - # episodes completed so far: 8
+2025-09-06 22:35:41,416 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:41,416 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:42,136 - INFO - Starting episode 9...
+2025-09-06 22:35:42,148 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:42,220 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_8_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:42,221 - INFO - Success: False
+2025-09-06 22:35:42,221 - INFO - # episodes completed so far: 9
+2025-09-06 22:35:42,221 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:42,221 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:42,943 - INFO - Starting episode 10...
+2025-09-06 22:35:42,954 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:43,029 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_9_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:43,029 - INFO - Success: False
+2025-09-06 22:35:43,029 - INFO - # episodes completed so far: 10
+2025-09-06 22:35:43,029 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:43,029 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:43,752 - INFO - Starting episode 11...
+2025-09-06 22:35:43,764 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:43,834 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_10_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:43,834 - INFO - Success: False
+2025-09-06 22:35:43,834 - INFO - # episodes completed so far: 11
+2025-09-06 22:35:43,834 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:43,835 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:44,557 - INFO - Starting episode 12...
+2025-09-06 22:35:44,568 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:44,652 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_11_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:44,652 - INFO - Success: False
+2025-09-06 22:35:44,652 - INFO - # episodes completed so far: 12
+2025-09-06 22:35:44,652 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:44,653 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:45,396 - INFO - Starting episode 13...
+2025-09-06 22:35:45,408 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:45,480 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_12_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:45,480 - INFO - Success: False
+2025-09-06 22:35:45,480 - INFO - # episodes completed so far: 13
+2025-09-06 22:35:45,480 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:45,480 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:46,212 - INFO - Starting episode 14...
+2025-09-06 22:35:46,224 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:46,290 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_13_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:46,290 - INFO - Success: False
+2025-09-06 22:35:46,290 - INFO - # episodes completed so far: 14
+2025-09-06 22:35:46,290 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:46,291 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:47,020 - INFO - Starting episode 15...
+2025-09-06 22:35:47,032 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:47,103 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_14_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:47,103 - INFO - Success: False
+2025-09-06 22:35:47,103 - INFO - # episodes completed so far: 15
+2025-09-06 22:35:47,103 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:47,103 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:47,854 - INFO - Starting episode 16...
+2025-09-06 22:35:47,866 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:47,937 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_15_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:47,937 - INFO - Success: False
+2025-09-06 22:35:47,937 - INFO - # episodes completed so far: 16
+2025-09-06 22:35:47,937 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:47,937 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:48,701 - INFO - Starting episode 17...
+2025-09-06 22:35:48,714 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:48,791 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_16_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:48,792 - INFO - Success: False
+2025-09-06 22:35:48,792 - INFO - # episodes completed so far: 17
+2025-09-06 22:35:48,792 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:48,792 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:49,538 - INFO - Starting episode 18...
+2025-09-06 22:35:49,550 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:49,627 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_17_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:49,627 - INFO - Success: False
+2025-09-06 22:35:49,627 - INFO - # episodes completed so far: 18
+2025-09-06 22:35:49,627 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:49,628 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:50,384 - INFO - Starting episode 19...
+2025-09-06 22:35:50,396 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:50,471 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_18_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:50,471 - INFO - Success: False
+2025-09-06 22:35:50,471 - INFO - # episodes completed so far: 19
+2025-09-06 22:35:50,471 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:50,471 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:51,221 - INFO - Starting episode 20...
+2025-09-06 22:35:51,233 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:51,307 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_19_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:51,307 - INFO - Success: False
+2025-09-06 22:35:51,307 - INFO - # episodes completed so far: 20
+2025-09-06 22:35:51,308 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:51,308 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:52,062 - INFO - Starting episode 21...
+2025-09-06 22:35:52,074 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:52,150 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_20_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:52,150 - INFO - Success: False
+2025-09-06 22:35:52,150 - INFO - # episodes completed so far: 21
+2025-09-06 22:35:52,150 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:52,150 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:52,903 - INFO - Starting episode 22...
+2025-09-06 22:35:52,914 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:52,990 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_21_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:52,991 - INFO - Success: False
+2025-09-06 22:35:52,991 - INFO - # episodes completed so far: 22
+2025-09-06 22:35:52,991 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:52,991 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:53,744 - INFO - Starting episode 23...
+2025-09-06 22:35:53,757 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:53,833 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_22_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:53,833 - INFO - Success: False
+2025-09-06 22:35:53,833 - INFO - # episodes completed so far: 23
+2025-09-06 22:35:53,833 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:53,833 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:54,581 - INFO - Starting episode 24...
+2025-09-06 22:35:54,592 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:54,665 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_23_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:54,665 - INFO - Success: False
+2025-09-06 22:35:54,665 - INFO - # episodes completed so far: 24
+2025-09-06 22:35:54,665 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:54,665 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:55,419 - INFO - Starting episode 25...
+2025-09-06 22:35:55,430 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:55,506 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_24_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:55,506 - INFO - Success: False
+2025-09-06 22:35:55,506 - INFO - # episodes completed so far: 25
+2025-09-06 22:35:55,506 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:55,507 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:56,270 - INFO - Starting episode 26...
+2025-09-06 22:35:56,283 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:56,358 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_25_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:56,358 - INFO - Success: False
+2025-09-06 22:35:56,358 - INFO - # episodes completed so far: 26
+2025-09-06 22:35:56,359 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:56,359 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:57,120 - INFO - Starting episode 27...
+2025-09-06 22:35:57,131 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:57,207 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_26_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:57,207 - INFO - Success: False
+2025-09-06 22:35:57,207 - INFO - # episodes completed so far: 27
+2025-09-06 22:35:57,207 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:57,208 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:57,949 - INFO - Starting episode 28...
+2025-09-06 22:35:57,961 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:58,038 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_27_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:58,038 - INFO - Success: False
+2025-09-06 22:35:58,038 - INFO - # episodes completed so far: 28
+2025-09-06 22:35:58,038 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:58,039 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:58,796 - INFO - Starting episode 29...
+2025-09-06 22:35:58,807 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:58,893 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_28_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:58,893 - INFO - Success: False
+2025-09-06 22:35:58,893 - INFO - # episodes completed so far: 29
+2025-09-06 22:35:58,893 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:58,894 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:35:59,646 - INFO - Starting episode 30...
+2025-09-06 22:35:59,658 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:35:59,734 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_29_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:35:59,734 - INFO - Success: False
+2025-09-06 22:35:59,734 - INFO - # episodes completed so far: 30
+2025-09-06 22:35:59,734 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:35:59,734 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:00,500 - INFO - Starting episode 31...
+2025-09-06 22:36:00,512 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:00,585 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_30_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:00,585 - INFO - Success: False
+2025-09-06 22:36:00,585 - INFO - # episodes completed so far: 31
+2025-09-06 22:36:00,585 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:00,585 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:01,333 - INFO - Starting episode 32...
+2025-09-06 22:36:01,345 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:01,420 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_31_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:01,420 - INFO - Success: False
+2025-09-06 22:36:01,420 - INFO - # episodes completed so far: 32
+2025-09-06 22:36:01,420 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:01,420 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:02,174 - INFO - Starting episode 33...
+2025-09-06 22:36:02,186 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:02,258 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_32_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:02,258 - INFO - Success: False
+2025-09-06 22:36:02,258 - INFO - # episodes completed so far: 33
+2025-09-06 22:36:02,258 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:02,259 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:03,012 - INFO - Starting episode 34...
+2025-09-06 22:36:03,023 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:03,101 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_33_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:03,101 - INFO - Success: False
+2025-09-06 22:36:03,101 - INFO - # episodes completed so far: 34
+2025-09-06 22:36:03,101 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:03,101 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:03,854 - INFO - Starting episode 35...
+2025-09-06 22:36:03,866 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:03,943 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_34_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:03,943 - INFO - Success: False
+2025-09-06 22:36:03,943 - INFO - # episodes completed so far: 35
+2025-09-06 22:36:03,943 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:03,943 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:04,696 - INFO - Starting episode 36...
+2025-09-06 22:36:04,708 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:04,784 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_35_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:04,784 - INFO - Success: False
+2025-09-06 22:36:04,784 - INFO - # episodes completed so far: 36
+2025-09-06 22:36:04,784 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:04,784 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:05,537 - INFO - Starting episode 37...
+2025-09-06 22:36:05,549 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:05,624 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_36_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:05,625 - INFO - Success: False
+2025-09-06 22:36:05,625 - INFO - # episodes completed so far: 37
+2025-09-06 22:36:05,625 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:05,625 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:06,369 - INFO - Starting episode 38...
+2025-09-06 22:36:06,381 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:06,456 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_37_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:06,456 - INFO - Success: False
+2025-09-06 22:36:06,456 - INFO - # episodes completed so far: 38
+2025-09-06 22:36:06,456 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:06,457 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:07,210 - INFO - Starting episode 39...
+2025-09-06 22:36:07,223 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:07,298 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_38_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:07,298 - INFO - Success: False
+2025-09-06 22:36:07,298 - INFO - # episodes completed so far: 39
+2025-09-06 22:36:07,298 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:07,299 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:08,044 - INFO - Starting episode 40...
+2025-09-06 22:36:08,055 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:08,132 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_39_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:08,132 - INFO - Success: False
+2025-09-06 22:36:08,132 - INFO - # episodes completed so far: 40
+2025-09-06 22:36:08,132 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:08,132 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:08,891 - INFO - Starting episode 41...
+2025-09-06 22:36:08,903 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:08,987 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_40_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:08,987 - INFO - Success: False
+2025-09-06 22:36:08,987 - INFO - # episodes completed so far: 41
+2025-09-06 22:36:08,987 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:08,988 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:09,731 - INFO - Starting episode 42...
+2025-09-06 22:36:09,743 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:09,818 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_41_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:09,818 - INFO - Success: False
+2025-09-06 22:36:09,818 - INFO - # episodes completed so far: 42
+2025-09-06 22:36:09,818 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:09,818 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:10,563 - INFO - Starting episode 43...
+2025-09-06 22:36:10,575 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:10,651 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_42_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:10,651 - INFO - Success: False
+2025-09-06 22:36:10,651 - INFO - # episodes completed so far: 43
+2025-09-06 22:36:10,651 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:10,651 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:11,390 - INFO - Starting episode 44...
+2025-09-06 22:36:11,402 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:11,475 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_43_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:11,475 - INFO - Success: False
+2025-09-06 22:36:11,475 - INFO - # episodes completed so far: 44
+2025-09-06 22:36:11,475 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:11,475 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:12,222 - INFO - Starting episode 45...
+2025-09-06 22:36:12,234 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:12,306 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_44_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:12,306 - INFO - Success: False
+2025-09-06 22:36:12,306 - INFO - # episodes completed so far: 45
+2025-09-06 22:36:12,307 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:12,307 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:13,049 - INFO - Starting episode 46...
+2025-09-06 22:36:13,061 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:13,134 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_45_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:13,134 - INFO - Success: False
+2025-09-06 22:36:13,134 - INFO - # episodes completed so far: 46
+2025-09-06 22:36:13,134 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:13,134 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:13,885 - INFO - Starting episode 47...
+2025-09-06 22:36:13,897 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:13,974 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_46_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:13,974 - INFO - Success: False
+2025-09-06 22:36:13,974 - INFO - # episodes completed so far: 47
+2025-09-06 22:36:13,974 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:13,975 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:14,716 - INFO - Starting episode 48...
+2025-09-06 22:36:14,727 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:14,801 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_47_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:14,802 - INFO - Success: False
+2025-09-06 22:36:14,802 - INFO - # episodes completed so far: 48
+2025-09-06 22:36:14,802 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:14,802 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:15,545 - INFO - Starting episode 49...
+2025-09-06 22:36:15,558 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:15,633 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_48_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:15,633 - INFO - Success: False
+2025-09-06 22:36:15,634 - INFO - # episodes completed so far: 49
+2025-09-06 22:36:15,634 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:15,634 - INFO - 
+Task: pick up the alphabet soup and place it in the basket
+2025-09-06 22:36:16,374 - INFO - Starting episode 50...
+2025-09-06 22:36:16,386 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:16,463 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_0_episode_49_pick_up_the_alphabet_soup_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:16,463 - INFO - Success: False
+2025-09-06 22:36:16,463 - INFO - # episodes completed so far: 50
+2025-09-06 22:36:16,463 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:16,464 - INFO - Task 0 success rate: 0.00
+2025-09-06 22:36:16,464 - INFO - Cumulative success rate: 0.00
+2025-09-06 22:36:17,050 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:17,720 - INFO - Starting episode 1...
+2025-09-06 22:36:17,733 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:17,802 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_0_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:17,802 - INFO - Success: False
+2025-09-06 22:36:17,802 - INFO - # episodes completed so far: 51
+2025-09-06 22:36:17,802 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:17,802 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:18,506 - INFO - Starting episode 2...
+2025-09-06 22:36:18,518 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:18,596 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_1_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:18,596 - INFO - Success: False
+2025-09-06 22:36:18,597 - INFO - # episodes completed so far: 52
+2025-09-06 22:36:18,597 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:18,597 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:19,300 - INFO - Starting episode 3...
+2025-09-06 22:36:19,312 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:19,390 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_2_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:19,391 - INFO - Success: False
+2025-09-06 22:36:19,391 - INFO - # episodes completed so far: 53
+2025-09-06 22:36:19,391 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:19,391 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:20,095 - INFO - Starting episode 4...
+2025-09-06 22:36:20,106 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:20,182 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_3_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:20,182 - INFO - Success: False
+2025-09-06 22:36:20,182 - INFO - # episodes completed so far: 54
+2025-09-06 22:36:20,182 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:20,183 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:20,887 - INFO - Starting episode 5...
+2025-09-06 22:36:20,899 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:20,968 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_4_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:20,968 - INFO - Success: False
+2025-09-06 22:36:20,968 - INFO - # episodes completed so far: 55
+2025-09-06 22:36:20,968 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:20,969 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:21,679 - INFO - Starting episode 6...
+2025-09-06 22:36:21,691 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:21,768 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_5_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:21,768 - INFO - Success: False
+2025-09-06 22:36:21,769 - INFO - # episodes completed so far: 56
+2025-09-06 22:36:21,769 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:21,769 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:22,476 - INFO - Starting episode 7...
+2025-09-06 22:36:22,487 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:22,564 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_6_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:22,564 - INFO - Success: False
+2025-09-06 22:36:22,564 - INFO - # episodes completed so far: 57
+2025-09-06 22:36:22,564 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:22,565 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:23,272 - INFO - Starting episode 8...
+2025-09-06 22:36:23,283 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:23,358 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_7_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:23,358 - INFO - Success: False
+2025-09-06 22:36:23,358 - INFO - # episodes completed so far: 58
+2025-09-06 22:36:23,358 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:23,358 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:24,061 - INFO - Starting episode 9...
+2025-09-06 22:36:24,073 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:24,150 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_8_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:24,150 - INFO - Success: False
+2025-09-06 22:36:24,150 - INFO - # episodes completed so far: 59
+2025-09-06 22:36:24,150 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:24,150 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:24,850 - INFO - Starting episode 10...
+2025-09-06 22:36:24,862 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:24,952 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_9_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:24,952 - INFO - Success: False
+2025-09-06 22:36:24,952 - INFO - # episodes completed so far: 60
+2025-09-06 22:36:24,952 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:24,952 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:25,661 - INFO - Starting episode 11...
+2025-09-06 22:36:25,673 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:25,753 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_10_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:25,753 - INFO - Success: False
+2025-09-06 22:36:25,753 - INFO - # episodes completed so far: 61
+2025-09-06 22:36:25,754 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:25,754 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:26,456 - INFO - Starting episode 12...
+2025-09-06 22:36:26,468 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:26,547 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_11_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:26,547 - INFO - Success: False
+2025-09-06 22:36:26,547 - INFO - # episodes completed so far: 62
+2025-09-06 22:36:26,547 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:26,548 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:27,251 - INFO - Starting episode 13...
+2025-09-06 22:36:27,263 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:27,347 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_12_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:27,347 - INFO - Success: False
+2025-09-06 22:36:27,347 - INFO - # episodes completed so far: 63
+2025-09-06 22:36:27,347 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:27,348 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:28,050 - INFO - Starting episode 14...
+2025-09-06 22:36:28,061 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:28,137 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_13_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:28,138 - INFO - Success: False
+2025-09-06 22:36:28,138 - INFO - # episodes completed so far: 64
+2025-09-06 22:36:28,138 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:28,138 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:28,846 - INFO - Starting episode 15...
+2025-09-06 22:36:28,858 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:28,936 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_14_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:28,937 - INFO - Success: False
+2025-09-06 22:36:28,937 - INFO - # episodes completed so far: 65
+2025-09-06 22:36:28,937 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:28,937 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:29,644 - INFO - Starting episode 16...
+2025-09-06 22:36:29,656 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:29,735 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_15_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:29,735 - INFO - Success: False
+2025-09-06 22:36:29,735 - INFO - # episodes completed so far: 66
+2025-09-06 22:36:29,735 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:29,735 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:30,461 - INFO - Starting episode 17...
+2025-09-06 22:36:30,474 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:30,548 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_16_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:30,549 - INFO - Success: False
+2025-09-06 22:36:30,549 - INFO - # episodes completed so far: 67
+2025-09-06 22:36:30,549 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:30,549 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:31,277 - INFO - Starting episode 18...
+2025-09-06 22:36:31,289 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:36:31,369 - INFO - Saved video to data/libero/object/without_force/videos/rollout_task_1_episode_17_pick_up_the_cream_cheese_and_place_it_in_the_basket_failure.mp4
+2025-09-06 22:36:31,369 - INFO - Success: False
+2025-09-06 22:36:31,369 - INFO - # episodes completed so far: 68
+2025-09-06 22:36:31,369 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:36:31,370 - INFO - 
+Task: pick up the cream cheese and place it in the basket
+2025-09-06 22:36:32,084 - INFO - Starting episode 19...
+2025-09-06 22:36:32,096 - ERROR - Caught exception: linear(): argument 'input' (position 1) must be Tensor, not NoneType
+2025-09-06 22:37:33,865 - INFO - Cuda backend detected, using cuda.
+2025-09-06 22:37:33,866 - WARNING - Device 'None' is not available. Switching to 'cuda'.
+2025-09-06 22:37:33,935 - INFO - Cuda backend detected, using cuda.
+2025-09-06 22:37:33,935 - WARNING - Device 'None' is not available. Switching to 'cuda'.
+2025-09-06 22:37:36,138 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-09-06 22:37:41,736 - INFO - Task suite: libero_spatial
+2025-09-06 22:37:43,500 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:44,365 - INFO - Starting episode 1...
+2025-09-06 22:37:44,380 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:44,500 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_0_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:44,500 - INFO - Success: False
+2025-09-06 22:37:44,500 - INFO - # episodes completed so far: 1
+2025-09-06 22:37:44,500 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:44,501 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:45,293 - INFO - Starting episode 2...
+2025-09-06 22:37:45,297 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:45,376 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_1_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:45,377 - INFO - Success: False
+2025-09-06 22:37:45,377 - INFO - # episodes completed so far: 2
+2025-09-06 22:37:45,377 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:45,377 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:46,239 - INFO - Starting episode 3...
+2025-09-06 22:37:46,243 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:46,313 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_2_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:46,313 - INFO - Success: False
+2025-09-06 22:37:46,313 - INFO - # episodes completed so far: 3
+2025-09-06 22:37:46,313 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:46,313 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:47,121 - INFO - Starting episode 4...
+2025-09-06 22:37:47,125 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:47,198 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_3_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:47,198 - INFO - Success: False
+2025-09-06 22:37:47,198 - INFO - # episodes completed so far: 4
+2025-09-06 22:37:47,198 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:47,198 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:48,053 - INFO - Starting episode 5...
+2025-09-06 22:37:48,057 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:48,141 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_4_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:48,141 - INFO - Success: False
+2025-09-06 22:37:48,142 - INFO - # episodes completed so far: 5
+2025-09-06 22:37:48,142 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:48,142 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:48,954 - INFO - Starting episode 6...
+2025-09-06 22:37:48,958 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:49,037 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_5_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:49,037 - INFO - Success: False
+2025-09-06 22:37:49,037 - INFO - # episodes completed so far: 6
+2025-09-06 22:37:49,037 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:49,038 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:49,892 - INFO - Starting episode 7...
+2025-09-06 22:37:49,896 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:49,972 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_6_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:49,972 - INFO - Success: False
+2025-09-06 22:37:49,972 - INFO - # episodes completed so far: 7
+2025-09-06 22:37:49,972 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:49,972 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:50,779 - INFO - Starting episode 8...
+2025-09-06 22:37:50,783 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:50,863 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_7_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:50,864 - INFO - Success: False
+2025-09-06 22:37:50,864 - INFO - # episodes completed so far: 8
+2025-09-06 22:37:50,864 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:50,864 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:51,720 - INFO - Starting episode 9...
+2025-09-06 22:37:51,724 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:51,805 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_8_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:51,805 - INFO - Success: False
+2025-09-06 22:37:51,805 - INFO - # episodes completed so far: 9
+2025-09-06 22:37:51,805 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:51,806 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:52,611 - INFO - Starting episode 10...
+2025-09-06 22:37:52,615 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:52,696 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_9_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:52,696 - INFO - Success: False
+2025-09-06 22:37:52,696 - INFO - # episodes completed so far: 10
+2025-09-06 22:37:52,696 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:52,696 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:53,555 - INFO - Starting episode 11...
+2025-09-06 22:37:53,558 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:53,639 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_10_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:53,639 - INFO - Success: False
+2025-09-06 22:37:53,639 - INFO - # episodes completed so far: 11
+2025-09-06 22:37:53,639 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:53,639 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:54,448 - INFO - Starting episode 12...
+2025-09-06 22:37:54,452 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:54,520 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_11_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:54,520 - INFO - Success: False
+2025-09-06 22:37:54,520 - INFO - # episodes completed so far: 12
+2025-09-06 22:37:54,520 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:54,520 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:55,379 - INFO - Starting episode 13...
+2025-09-06 22:37:55,383 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:55,464 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_12_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:55,465 - INFO - Success: False
+2025-09-06 22:37:55,465 - INFO - # episodes completed so far: 13
+2025-09-06 22:37:55,465 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:55,465 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:56,288 - INFO - Starting episode 14...
+2025-09-06 22:37:56,292 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:56,352 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_13_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:56,352 - INFO - Success: False
+2025-09-06 22:37:56,352 - INFO - # episodes completed so far: 14
+2025-09-06 22:37:56,352 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:56,353 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:57,211 - INFO - Starting episode 15...
+2025-09-06 22:37:57,215 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:57,286 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_14_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:57,286 - INFO - Success: False
+2025-09-06 22:37:57,286 - INFO - # episodes completed so far: 15
+2025-09-06 22:37:57,286 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:57,287 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:58,103 - INFO - Starting episode 16...
+2025-09-06 22:37:58,106 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:58,166 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_15_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:58,167 - INFO - Success: False
+2025-09-06 22:37:58,167 - INFO - # episodes completed so far: 16
+2025-09-06 22:37:58,167 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:58,167 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:59,017 - INFO - Starting episode 17...
+2025-09-06 22:37:59,020 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:59,083 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_16_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:59,083 - INFO - Success: False
+2025-09-06 22:37:59,083 - INFO - # episodes completed so far: 17
+2025-09-06 22:37:59,083 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:59,084 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:37:59,885 - INFO - Starting episode 18...
+2025-09-06 22:37:59,888 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:37:59,970 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_17_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:37:59,971 - INFO - Success: False
+2025-09-06 22:37:59,971 - INFO - # episodes completed so far: 18
+2025-09-06 22:37:59,971 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:37:59,971 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:00,837 - INFO - Starting episode 19...
+2025-09-06 22:38:00,841 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:00,923 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_18_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:00,923 - INFO - Success: False
+2025-09-06 22:38:00,923 - INFO - # episodes completed so far: 19
+2025-09-06 22:38:00,924 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:00,924 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:01,730 - INFO - Starting episode 20...
+2025-09-06 22:38:01,733 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:01,794 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_19_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:01,794 - INFO - Success: False
+2025-09-06 22:38:01,794 - INFO - # episodes completed so far: 20
+2025-09-06 22:38:01,794 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:01,795 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:02,641 - INFO - Starting episode 21...
+2025-09-06 22:38:02,644 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:02,706 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_20_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:02,707 - INFO - Success: False
+2025-09-06 22:38:02,707 - INFO - # episodes completed so far: 21
+2025-09-06 22:38:02,707 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:02,707 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:03,508 - INFO - Starting episode 22...
+2025-09-06 22:38:03,512 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:03,586 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_21_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:03,587 - INFO - Success: False
+2025-09-06 22:38:03,587 - INFO - # episodes completed so far: 22
+2025-09-06 22:38:03,587 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:03,587 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:04,446 - INFO - Starting episode 23...
+2025-09-06 22:38:04,449 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:04,519 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_22_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:04,519 - INFO - Success: False
+2025-09-06 22:38:04,519 - INFO - # episodes completed so far: 23
+2025-09-06 22:38:04,519 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:04,519 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:05,321 - INFO - Starting episode 24...
+2025-09-06 22:38:05,325 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:05,404 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_23_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:05,404 - INFO - Success: False
+2025-09-06 22:38:05,404 - INFO - # episodes completed so far: 24
+2025-09-06 22:38:05,404 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:05,404 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:06,265 - INFO - Starting episode 25...
+2025-09-06 22:38:06,269 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:06,349 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_24_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:06,349 - INFO - Success: False
+2025-09-06 22:38:06,349 - INFO - # episodes completed so far: 25
+2025-09-06 22:38:06,349 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:06,349 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:11,290 - INFO - Starting episode 26...
+2025-09-06 22:38:11,294 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:11,365 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_25_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:11,366 - INFO - Success: False
+2025-09-06 22:38:11,366 - INFO - # episodes completed so far: 26
+2025-09-06 22:38:11,366 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:11,366 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:12,187 - INFO - Starting episode 27...
+2025-09-06 22:38:12,191 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:12,252 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_26_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:12,252 - INFO - Success: False
+2025-09-06 22:38:12,252 - INFO - # episodes completed so far: 27
+2025-09-06 22:38:12,252 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:12,252 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:13,111 - INFO - Starting episode 28...
+2025-09-06 22:38:13,114 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:13,187 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_27_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:13,187 - INFO - Success: False
+2025-09-06 22:38:13,187 - INFO - # episodes completed so far: 28
+2025-09-06 22:38:13,187 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:13,187 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:14,003 - INFO - Starting episode 29...
+2025-09-06 22:38:14,007 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:14,072 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_28_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:14,073 - INFO - Success: False
+2025-09-06 22:38:14,073 - INFO - # episodes completed so far: 29
+2025-09-06 22:38:14,073 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:14,073 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:14,938 - INFO - Starting episode 30...
+2025-09-06 22:38:14,941 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:15,011 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_29_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:15,011 - INFO - Success: False
+2025-09-06 22:38:15,011 - INFO - # episodes completed so far: 30
+2025-09-06 22:38:15,011 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:15,011 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:15,832 - INFO - Starting episode 31...
+2025-09-06 22:38:15,836 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:15,915 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_30_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:15,915 - INFO - Success: False
+2025-09-06 22:38:15,915 - INFO - # episodes completed so far: 31
+2025-09-06 22:38:15,915 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:15,915 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:16,779 - INFO - Starting episode 32...
+2025-09-06 22:38:16,783 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:16,848 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_31_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:16,848 - INFO - Success: False
+2025-09-06 22:38:16,848 - INFO - # episodes completed so far: 32
+2025-09-06 22:38:16,848 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:16,848 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:17,663 - INFO - Starting episode 33...
+2025-09-06 22:38:17,666 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:17,727 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_32_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:17,728 - INFO - Success: False
+2025-09-06 22:38:17,728 - INFO - # episodes completed so far: 33
+2025-09-06 22:38:17,728 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:17,728 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:18,588 - INFO - Starting episode 34...
+2025-09-06 22:38:18,591 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:18,663 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_33_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:18,663 - INFO - Success: False
+2025-09-06 22:38:18,663 - INFO - # episodes completed so far: 34
+2025-09-06 22:38:18,664 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:18,664 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:19,484 - INFO - Starting episode 35...
+2025-09-06 22:38:19,487 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:19,563 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_34_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:19,563 - INFO - Success: False
+2025-09-06 22:38:19,563 - INFO - # episodes completed so far: 35
+2025-09-06 22:38:19,563 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:19,563 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:20,425 - INFO - Starting episode 36...
+2025-09-06 22:38:20,429 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:20,498 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_35_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:20,499 - INFO - Success: False
+2025-09-06 22:38:20,499 - INFO - # episodes completed so far: 36
+2025-09-06 22:38:20,499 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:20,499 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+2025-09-06 22:38:21,316 - INFO - Starting episode 37...
+2025-09-06 22:38:21,319 - ERROR - Caught exception: `mean` is infinity. You should either initialize with `stats` as an argument, or use a pretrained model.
+2025-09-06 22:38:21,380 - INFO - Saved video to data/libero/videos/rollout_task_0_episode_36_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_failure.mp4
+2025-09-06 22:38:21,381 - INFO - Success: False
+2025-09-06 22:38:21,381 - INFO - # episodes completed so far: 37
+2025-09-06 22:38:21,381 - INFO - # successes: 0 (0.0%)
+2025-09-06 22:38:21,381 - INFO - 
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
