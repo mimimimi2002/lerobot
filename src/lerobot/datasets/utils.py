@@ -254,23 +254,63 @@ def load_image_as_numpy(
     return img_array
 
 
-def hf_transform_to_torch(items_dict: dict[torch.Tensor | None]):
-    """Get a transform function that convert items from Hugging Face dataset (pyarrow)
-    to torch tensors. Importantly, images are converted from PIL, which corresponds to
-    a channel last representation (h w c) of uint8 type, to a torch image representation
-    with channel first (c h w) of float32 type in range [0,1].
-    """
+# def hf_transform_to_torch(items_dict: dict[torch.Tensor | None]):
+#     """Get a transform function that convert items from Hugging Face dataset (pyarrow)
+#     to torch tensors. Importantly, images are converted from PIL, which corresponds to
+#     a channel last representation (h w c) of uint8 type, to a torch image representation
+#     with channel first (c h w) of float32 type in range [0,1].
+#     """
+#     for key in items_dict:
+#         first_item = items_dict[key][0]
+#         if isinstance(first_item, PILImage.Image):
+#             to_tensor = transforms.ToTensor()
+#             items_dict[key] = [to_tensor(img) for img in items_dict[key]]
+#         elif first_item is None:
+#             pass
+#         else:
+#             items_dict[key] = [x if isinstance(x, str) else torch.tensor(x) for x in items_dict[key]]
+#     return items_dict
+
+import io
+import base64
+from PIL import Image as PILImage
+from torchvision import transforms
+import torch
+
+def hf_transform_to_torch(items_dict):
+    to_tensor = transforms.ToTensor()
+
     for key in items_dict:
         first_item = items_dict[key][0]
-        if isinstance(first_item, PILImage.Image):
-            to_tensor = transforms.ToTensor()
+
+        # HF Image (bytes dict)
+        if isinstance(first_item, dict) and "bytes" in first_item:
+            imgs = []
+            for x in items_dict[key]:
+                b = x["bytes"]
+
+                if isinstance(b, str):
+                    b = base64.b64decode(b)
+                # bytes の場合はそのまま
+
+                img = PILImage.open(io.BytesIO(b)).convert("RGB")
+                imgs.append(to_tensor(img))
+
+            items_dict[key] = imgs
+
+        elif isinstance(first_item, PILImage.Image):
             items_dict[key] = [to_tensor(img) for img in items_dict[key]]
+
         elif first_item is None:
             pass
-        else:
-            items_dict[key] = [x if isinstance(x, str) else torch.tensor(x) for x in items_dict[key]]
-    return items_dict
 
+        else:
+            items_dict[key] = [
+                x if isinstance(x, str) else torch.tensor(x)
+                for x in items_dict[key]
+            ]
+
+    return items_dict
 
 def is_valid_version(version: str) -> bool:
     try:
