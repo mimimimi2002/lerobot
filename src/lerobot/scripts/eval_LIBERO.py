@@ -184,16 +184,20 @@ def eval_libero(args: Args) -> None:
                         )
                     )
                     observation = {
-                        "observation.images.image": torch.from_numpy(agentview_image / 255.0)
-                        .permute(2, 0, 1)
-                        .to(torch.float32)
-                        .to(args.device).unsqueeze(0),
-                        "observation.images.wrist_image": torch.from_numpy(wrist_img / 255.0)
-                        .permute(2, 0, 1)
-                        .to(torch.float32)
-                        .to(args.device).unsqueeze(0),
-                        "observation.state": torch.from_numpy(state).to(torch.float32).to(args.device).unsqueeze(0),
-                        "task": task_description,
+                      "image": torch.from_numpy(agentview_image / 255.0)
+                          .permute(2, 0, 1)
+                          .to(torch.float32)
+                          .to(args.device).unsqueeze(0),
+
+                      "wrist_image": torch.from_numpy(wrist_img / 255.0)
+                          .permute(2, 0, 1)
+                          .to(torch.float32)
+                          .to(args.device).unsqueeze(0),
+
+                      "state": torch.from_numpy(state)
+                          .to(torch.float32).to(args.device).unsqueeze(0),
+
+                      "task": task_description,
                     }
 
                     # Query model to get action
@@ -212,9 +216,11 @@ def eval_libero(args: Args) -> None:
                         break
                     t += 1
 
-                except Exception as e:
-                    logging.error(f"Caught exception: {e}")
-                    break
+                except Exception:
+                  import traceback
+                  traceback.print_exc()
+                  break
+
 
             task_episodes += 1
             total_episodes += 1
