@@ -401,7 +401,14 @@ class SmolVLAPolicy(PreTrainedPolicy):
         state = self.prepare_state(batch)
         lang_tokens, lang_masks = self.prepare_language(batch)
         
-        actions = self.model.sample_actions(images, img_masks, lang_tokens, lang_masks, state, noise=noise)
+        if OBS_FINGER1_COLLISION in batch and OBS_FINGER2_COLLISION in batch and OBS_FINGER1_PAD_COLLISION in batch and OBS_FINGER2_PAD_COLLISION in batch:
+            print("with force")
+            force = self.prepare_force(batch)
+        else:
+            print("No Force")
+            force = None
+        
+        actions = self.model.sample_actions(images, img_masks, lang_tokens, lang_masks, state, noise=noise, force=force)
         # Unpad actions
         original_action_dim = self.config.action_feature.shape[0]
         actions = actions[:, :, :original_action_dim]
@@ -465,9 +472,11 @@ class SmolVLAPolicy(PreTrainedPolicy):
         state = self.prepare_state(batch)
         
         # add force
-        if OBS_FINGER1_COLLISION in batch:
+        if OBS_FINGER1_COLLISION in batch and OBS_FINGER2_COLLISION in batch and OBS_FINGER1_PAD_COLLISION in batch and OBS_FINGER2_PAD_COLLISION in batch:
+            print("with force")
             combined_force = self.prepare_force(batch)
         else:
+            print("No Force")
             combined_force = None
 
         lang_tokens, lang_masks = self.prepare_language(batch)
@@ -592,7 +601,7 @@ class SmolVLAPolicy(PreTrainedPolicy):
         return state
 
     def prepare_force(self, batch):
-        """Pad finger1 collision"""
+        """Pad finger1 pad collision and finger 2 pad collision"""
         finger1_collision = batch[OBS_FINGER1_COLLISION][:, -1, :] if batch[OBS_FINGER1_COLLISION].ndim > 2 else batch[OBS_FINGER1_COLLISION]
         finger1_pad_collision = batch[OBS_FINGER1_PAD_COLLISION][:, -1, :] if batch[OBS_FINGER1_PAD_COLLISION].ndim > 2 else batch[OBS_FINGER1_PAD_COLLISION]
         finger2_collision = batch[OBS_FINGER2_COLLISION][:, -1, :] if batch[OBS_FINGER2_COLLISION].ndim > 2 else batch[OBS_FINGER2_COLLISION]
@@ -915,7 +924,7 @@ class VLAFlowMatching(nn.Module):
         losses = F.mse_loss(u_t, v_t, reduction="none")
         return losses
 
-    def sample_actions(self, images, img_masks, lang_tokens, lang_masks, state, noise=None) -> Tensor:
+    def sample_actions(self, images, img_masks, lang_tokens, lang_masks, state, noise=None, force=None) -> Tensor:
         """Do a full inference forward and compute the action (batch_size x num_steps x num_motors)"""
         bsize = state.shape[0]
         device = state.device
@@ -925,7 +934,7 @@ class VLAFlowMatching(nn.Module):
             noise = self.sample_noise(actions_shape, device)
         
         prefix_embs, prefix_pad_masks, prefix_att_masks = self.embed_prefix(
-            images, img_masks, lang_tokens, lang_masks, state=state
+            images, img_masks, lang_tokens, lang_masks, state=state, force=force
         )
         prefix_att_2d_masks = make_att_2d_masks(prefix_pad_masks, prefix_att_masks)
         prefix_position_ids = torch.cumsum(prefix_pad_masks, dim=1) - 1
